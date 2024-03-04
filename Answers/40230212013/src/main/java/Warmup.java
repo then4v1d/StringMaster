@@ -49,6 +49,27 @@ public class Warmup {
      * @return The word that is first in alphabet column
      */
     public String firstWord(String wordA, String wordB) {
-        return null;
+
+  int minLength = Math.min(wordA.length(), wordB.length());
+  
+  for (int i = 0; i < minLength; i++) 
+  {
+    char charA = wordA.charAt(i);
+    char charB = wordB.charAt(i);
+    
+    if (charA != charB)
+     {
+      return charA < charB ? wordA : wordB;
+    }
+  }
+  
+  if (wordA.length() == wordB.length()) 
+  {
+    return wordA;
+  }
+   else 
+   {
+    return wordA.length() < wordB.length() ? wordA : wordB;
+  }
     }
 }
