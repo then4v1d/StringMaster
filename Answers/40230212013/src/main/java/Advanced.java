@@ -126,7 +126,27 @@ public class Advanced {
      * @return if word contains Consecutive repeated letters, one of the repeated letters should be omitted
      */
     public String doubleChar(String word) {
-        return null;
+        StringBuilder str = new StringBuilder();
+        char c;
+        int i=-1;
+        String fixedWord;
+        while(i<word.length())
+        {   i++;
+            c = word.charAt(i);
+            if(i+1>=word.length())
+            {
+                str.append(word.charAt(i));
+                break;
+            }
+            if(c==word.charAt(i+1))
+            {
+               continue;
+            }
+            str.append(word.charAt(i));
+            
+        }
+         fixedWord = str.toString();
+         return fixedWord;
     }
 }
 
