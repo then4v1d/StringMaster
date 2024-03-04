@@ -22,8 +22,26 @@ public class Warmup {
      * @return if searchForEven is true ? return the number of even numbers : return the number of odd numbers
      */
     public int oddEvenCounter(String number, boolean searchForEven) {
-        return -1;
-    }
+            int count = 0;
+        
+            for (int i = 0; i < number.length(); i++) {
+                if (searchForEven) {
+                    if (Character.isDigit(number.charAt(i)) && number.charAt(i) % 2 == 0) {
+                        count++;
+                    }
+                } else {
+                    if (Character.isDigit(number.charAt(i)) && number.charAt(i) % 2 != 0) {
+                        count++;
+                    }
+                }
+            }
+        
+            return count;
+        }
+           
+
+    
+    
 
     /**
      * @param wordA --> first word
